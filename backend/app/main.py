@@ -8,8 +8,16 @@ from app.services.video_service import register_video, get_video
 from app.services.llm_service import answer_question_from_video
 from app.models.ask_model import AskRequest
 from app.models.upload_model import UploadResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/health")
 def health():

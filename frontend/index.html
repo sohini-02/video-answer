@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+            VideoQA
+        </title>
+        <link rel = 'stylesheet' href = 'style.css'>
+    </head>
+
+    <body>
+        <h1> VideoQA </h1>
+        <div class = 'container'>
+
+            <! -- Upload Section -->
+            <div id = 'upload-section'>
+                <h2> Upload video </h2>
+                <input type = 'file' id = 'videoInput' accept = 'video/mp4'>
+                <button onclick = "uploadVideo()"> Upload </button>
+                <p id = 'uploadStatus'></p>
+            </div id>
+
+            <! -- Video Preview Section -->
+            <div id = 'videoPreview' class = 'hidden'>
+                <h2>Video Preview</h2>
+                <video id = 'videoPlayer' controls width = '500'></video>
+            </div>
+
+            <!-- Question -->
+            <div id = "question-section" class = "hidden">
+                <h2>Ask a Question About the Video (anything you want!)</h2>
+                <input type="text" id="questionInput" placeholder="Question goes here...">
+                <button onclick = "askQuestion()">Ask</button>
+                <p id = "answerOutput"></p>
+            </div>
+
+        </div>
+        <script src = "app.js"></script>
+    </body>
+</html>
