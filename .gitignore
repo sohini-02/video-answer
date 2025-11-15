@@ -8,7 +8,7 @@ __pycache__/
 venv/
 .env
 
-# FastAPI cache
+# FastAPI video uploads
 videos/
 uploads/
 
@@ -19,7 +19,7 @@ uploads/
 .DS_Store
 Thumbs.db
 
-# Node (if you build a frontend)
+# Node (to build a frontend)
 node_modules/
 dist/
 build/
