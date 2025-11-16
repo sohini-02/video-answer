@@ -15,7 +15,7 @@ async function uploadVideo() {
     document.getElementById("uploadStatus").textContent = "Uploading...";
 
     try {
-        const response = await fetch("https://few-bobcats-strive.loca.lt/api/videos", {
+        const response = await fetch("https://video-answer.onrender.com/api/videos", {
             method: "POST",
             body: formData
         });
@@ -31,7 +31,7 @@ async function uploadVideo() {
         document.getElementById("question-section").classList.remove("hidden");
 
         // Show the video in a player
-        document.getElementById("videoPlayer").src = `https://few-bobcats-strive.loca.lt/${data.path}`;
+        document.getElementById("videoPlayer").src = `https://video-answer.onrender.com/${data.path}`;
 
     } catch (error) {
         alert("Error uploading video");
@@ -55,7 +55,7 @@ async function askQuestion() {
     document.getElementById("answerOutput").textContent = "Thinking...";
 
     try {
-        const response = await fetch(`https://few-bobcats-strive.loca.lt/api/videos/${currentVideoId}/ask`, {
+        const response = await fetch(`https://video-answer.onrender.com/api/videos/${currentVideoId}/ask`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question })
